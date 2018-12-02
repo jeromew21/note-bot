@@ -56,28 +56,32 @@ def get_quantity(sentence):
     tokens = tokenize(sentence)
 
 def classify(tokens):
-    threshold = 0.25
+    threshold = 0.20
     max_max_word_similarity = -1000
     max_keyword_index = 0
+    max_max_word = None
     for i, synset_list in enumerate(keywords):
         max_word_similarity = -10000
+        max_word = None
         for word in tokens:
-            part_of_speech = "v"
             for synset in synset_list:
                 #FILTER BY PART OF SPEECH
-                to_sum = [synset.wup_similarity(ss) for ss in synsets(word) if ss.pos() == part_of_speech][:5] #Cutoff
+                to_sum = [synset.wup_similarity(ss) for ss in synsets(word)][:8] #Cutoff
                 to_sum = [0 if k is None else k for k in to_sum]
                 decay = 1
                 for j, _ in enumerate(to_sum): #Decay similarity
                     to_sum[j] *= decay
-                    decay *= 0.75 #Decay amount
+                    decay *= 0.9 #Decay amount
                 if len(to_sum) > 0:
                     similarity = sum(to_sum)/len(to_sum) #Mean
                     if similarity > max_word_similarity:
                         max_word_similarity = similarity
+                        max_word = word
         if max_word_similarity > max_max_word_similarity:
             max_max_word_similarity = max_word_similarity
             max_keyword_index = i
+            max_max_word = max_word
+            #print(max_max_word, max_word_similarity, max_keyword_index)
     if max_max_word_similarity < threshold:
         return -1
     return max_keyword_index
