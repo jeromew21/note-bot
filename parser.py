@@ -32,10 +32,13 @@ def classify(tokens):
     max_keyword_index = 0
     for i, synset in enumerate(keywords):
         max_word_similarity = -10000
+        max_word = None
         for word in tokens:
-            similarity = sum([synset.path_similarity(ss) for ss in synsets(word)])
+            to_sum = [synset.path_similarity(ss) for ss in synsets(word)]
+            similarity = sum(to_sum)/len(to_sum) #Mean
             if similarity > max_word_similarity:
                 max_word_similarity = similarity
+                max_word = word
         if max_word_similarity > max_max_word_similarity:
             max_max_word_similarity = max_word_similarity
             max_keyword_index = i
