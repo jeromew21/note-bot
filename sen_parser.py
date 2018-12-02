@@ -3,6 +3,7 @@ from nltk.corpus import stopwords
 from nltk.corpus import wordnet 
 
 STOPWORDS = set(stopwords.words("english"))
+STOPWORDS.add("please")
 
 def synsets(word):
     for syn in wordnet.synsets(word): 
@@ -50,10 +51,6 @@ def tokenize(sentence):
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
     tokens = nltk.word_tokenize(sentence)
     return [t for t in tokens if t not in STOPWORDS]
-
-def get_quantity(sentence):
-    #Find a quantity value from a sentence
-    tokens = tokenize(sentence)
 
 def classify(tokens):
     threshold = 0.20
@@ -129,3 +126,20 @@ def text2int(textnum, numwords={}):
             current = 0
 
     return result + current
+
+def get_quantity(sentence):
+    #Find a quantity value from a sentence
+    tokens = tokenize(sentence)
+    for word in tokens:
+        if word in ("last", "final"):
+            return -1
+        try:
+            q = text2int(word)
+        except:
+            pass
+        else:
+            return q
+    return None
+
+
+#please
