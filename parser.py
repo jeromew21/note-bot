@@ -26,6 +26,8 @@ def tokenize(sentence):
     return [t for t in tokens if t not in STOPWORDS]
 
 def classify(tokens):
+    #take note out
+    tokens = [k for k in tokens if k != "note"]
     max_max_word_similarity = -1000
     max_keyword_index = 0
     for i, synset in enumerate(keywords):
