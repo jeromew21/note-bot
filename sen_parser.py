@@ -26,7 +26,7 @@ POS_MAPPING = {
 
 keywords = [
     [wordnet.synset("take.v.01")],
-    [wordnet.synset("retrieve.v.02"), wordnet.synset("get.v.01")],
+    [wordnet.synset("retrieve.v.02")],
     [wordnet.synset("delete.v.01"), wordnet.synset("remove.v.01"), wordnet.synset('get_rid_of.v.01'), wordnet.synset('take_out.v.01')],
     [wordnet.synset('total.v.01'), wordnet.synset("many.a.01"), wordnet.synset('sum.n.03'), wordnet.synset('sum.n.02')],
 ]
