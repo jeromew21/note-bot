@@ -40,4 +40,5 @@ def classify(tokens):
         if max_word_similarity > max_max_word_similarity:
             max_max_word_similarity = max_word_similarity
             max_keyword_index = i
+        print(synset, max_word, max_word_similarity)
     return max_keyword_index
