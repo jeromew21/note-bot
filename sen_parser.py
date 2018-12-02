@@ -10,7 +10,7 @@ def synsets(word):
 
 keywords = [
     [wordnet.synset("take.v.01")],
-    [wordnet.synset("retrieve.v.02"), wordnet.synset("get.v.01")],
+    [wordnet.synset("retrieve.v.01")],
     [wordnet.synset("delete.v.01"), wordnet.synset("remove.v.01")],
     [wordnet.synset('total.v.01'), wordnet.synset("many.a.01")],
 ]
@@ -31,20 +31,30 @@ def tokenize(sentence):
     return [t for t in tokens if t not in STOPWORDS]
 
 def classify(tokens):
+    threshold = 0.2
     max_max_word_similarity = -1000
     max_keyword_index = 0
     for i, synset_list in enumerate(keywords):
         max_word_similarity = -10000
         max_word = None
-        for synset in synset_list:
-            for word in tokens:
-                to_sum = [synset.wup_similarity(ss) for ss in synsets(word)]
+        for word in tokens:
+            part_of_speech = "v"
+            for synset in synset_list:
+                #FILTER BY PART OF SPEECH
+                to_sum = [synset.wup_similarity(ss) for ss in synsets(word) if ss.pos() == part_of_speech][:10]
                 to_sum = [0 if k is None else k for k in to_sum]
-                similarity = sum(to_sum)/len(to_sum) #Mean
-                if similarity > max_word_similarity:
-                    max_word_similarity = similarity
-                    max_word = word
+                decay = 1
+                for j, val in enumerate(to_sum): #Decay similarity
+                    to_sum[j] *= decay
+                    decay *= 0.9
+                if len(to_sum) > 0:
+                    similarity = sum(to_sum)/len(to_sum) #Mean
+                    if similarity > max_word_similarity:
+                        max_word_similarity = similarity
+                        max_word = word
         if max_word_similarity > max_max_word_similarity:
             max_max_word_similarity = max_word_similarity
             max_keyword_index = i
+    if max_word_similarity < threshold:
+        return -1
     return max_keyword_index
