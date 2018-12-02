@@ -12,8 +12,6 @@ class Conversation:
         '''
         self.notes = []
         self.lastCommand = False
-    
-        pass
 
     def respond(self, sentence):
         '''
