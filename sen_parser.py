@@ -8,17 +8,38 @@ def synsets(word):
     for syn in wordnet.synsets(word): 
         yield syn
 
+POS_MAPPING = {
+    'NN': 'n',
+    'NNS': 'n',
+    'NNP': 'n',
+    'NNPS': 'n',
+    'VB': 'v',
+    'VBD': 'v',
+    'VBG': 'v',
+    'VBN': 'v',
+    'VBP': 'v',
+    'VBZ': 'v',
+    'JJ': 'a',
+    'JJR': 'a',
+    'JJS': 'a'
+    }
+
 keywords = [
     [wordnet.synset("take.v.01")],
     [wordnet.synset("retrieve.v.02"), wordnet.synset("get.v.01")],
-    [wordnet.synset("delete.v.01"), wordnet.synset("remove.v.01")],
-    [wordnet.synset('total.v.01'), wordnet.synset("many.a.01")],
+    [wordnet.synset("delete.v.01"), wordnet.synset("remove.v.01"), wordnet.synset('get_rid_of.v.01'), wordnet.synset('take_out.v.01')],
+    [wordnet.synset('total.v.01'), wordnet.synset("many.a.01"), wordnet.synset('sum.n.03'), wordnet.synset('sum.n.02')],
 ]
 
 #for vec in keyword_vectors:
  #   for i in range(len(vec)):
   #      for syn in synonyms(vec[i]):
    #         vec.append(syn)
+
+def pos_tag_to_wordnet_tag(tag):
+    """ Takes POS tag from NLTK and returns equivalent wordnet tag and None if not verb, noun, or adj """
+
+    return POS_MAPPING.get(tag, None)
 
 def tokenize_bigrams(sentence):
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
