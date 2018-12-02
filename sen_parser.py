@@ -31,15 +31,13 @@ def tokenize(sentence):
     return [t for t in tokens if t not in STOPWORDS]
 
 def classify(tokens):
-    #take note out
-    tokens = [k for k in tokens if k != "note"]
     max_max_word_similarity = -1000
     max_keyword_index = 0
     for i, synset in enumerate(keywords):
         max_word_similarity = -10000
         max_word = None
         for word in tokens:
-            to_sum = [synset.path_similarity(ss) for ss in synsets(word)]
+            to_sum = [synset.wup_similarity(ss) for ss in synsets(word)]
             similarity = sum(to_sum)/len(to_sum) #Mean
             if similarity > max_word_similarity:
                 max_word_similarity = similarity
