@@ -20,6 +20,11 @@ keywords = [
   #      for syn in synonyms(vec[i]):
    #         vec.append(syn)
 
+def tokenize_bigrams(sentence):
+    sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
+    tokens = nltk.word_tokenize(sentence)
+    return tokens
+
 def tokenize(sentence):
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
     tokens = nltk.word_tokenize(sentence)

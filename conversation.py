@@ -1,6 +1,6 @@
 import numpy as np
 import sklearn
-from parser import *
+from sen_parser import *
 
 class Conversation:
 
@@ -57,6 +57,7 @@ class Conversation:
 
     def totalNotes(self):
         return "You have " + str(len(self.notes)) + " notes."
+
 
     
 
