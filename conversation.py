@@ -28,7 +28,9 @@ class Conversation:
             return "Note taken."
 
         func = classify(tokenize(sentence))
-        if func == 0:
+        if func == -1:
+            return "I do not know what you are talking about."
+        elif func == 0:
             self.lastCommand = True
             return "What would you like me to note?"
         elif func == 1:
