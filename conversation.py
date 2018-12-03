@@ -67,7 +67,3 @@ class Conversation:
 
     def totalNotes(self):
         return "You have " + str(len(self.notes)) + " notes."
-
-
-    
-
