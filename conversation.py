@@ -1,6 +1,7 @@
 import numpy as np
 import sklearn
 from sen_parser import *
+import random
 
 class Conversation:
 
@@ -25,20 +26,27 @@ class Conversation:
             self.takeNote(sentence)
             return "Note taken."
 
+        tokens = tokenize(sentence)
+
         quant = get_quantity(sentence)
-        func = classify(tokenize(sentence))
+        func = classify(tokens)
+        sass = ""
+        if "please" in sentence.split(" "):
+            sass = " " + random.choice(("Thank you for saying please. So rare these days.", "", "You're very, very welcome."))
+        else:
+            sass = " " + random.choice(("What happened to common courtesy?"))
         
         if func == -1:
             return "I do not know what you are talking about."
         elif func == 0:
             self.lastCommand = True
-            return "What would you like me to note?"
+            return "What would you like me to note?" + sass
         elif func == 1:
-            return self.retrieveNote(quant)
+            return self.retrieveNote(quant) + sass
         elif func == 2:
-            return self.deleteNote(quant)
+            return self.deleteNote(quant) + sass
         elif func == 3:
-            return self.totalNotes()
+            return self.totalNotes() + sass
 
         return sentence
 
