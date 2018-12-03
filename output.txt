@@ -1,18 +1,190 @@
-advanced.txt
+15.txt
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>> Remind me to buy three oranges tomorrow.
+>>> Remind me to get lots of coffee tomorrow.
+<<< You have no notes to delete. Also, what happened to common courtesy?
+>>> Remind me to get water tomorrow.
 <<< You have no notes to delete. 
->>> What note did I take about oranges?
-<<< What would you like me to note? 
+>>> What was my note about caffeine?
+<<< You have no notes. It's empty, just like your mind. Also, what's the magic word?
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-basic.txt
+09.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hello, take a note.
+<<< You have no notes.  
+>>> Buy one pear.
+<<< You have no notes to delete. Also, what's the magic word?
+>>> Please take a note.
+<<< What would you like me to note? 
+>>> Buy two apples.
+<<< Note taken.
+>>> What was the first note that I took?
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> What was the second note that I took?
+<<< Note taken.
+>>> Please delete the first note that I took.
+<<< Deleted Buy two apples. Also, what happened to common courtesy?
+>>> What was my last note?
+<<< Your last note was: What was the second note that I took? 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+04.txt
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>> Hey, please take a note for me.
 <<< What would you like me to note? You're very, very welcome.
->>> Remind me to buy oranges tomorrow.
+>>> Buy a pear.
+<<< Note taken.
+>>> Hey, go ahead and delete my previous note.
+<<< Deleted Buy a pear. 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+08.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> I'd like to take a note.
+<<< What would you like me to note? 
+>>> Complete 189 homework.
+<<< Note taken.
+>>> Go ahead and delete the previous note.
+<<< Deleted Complete 189 homework. 
+>>> Hey, how many notes do I have?
+<<< You have 0 notes. 
+>>> Take a note please.
+<<< What would you like me to note? Also, what's the magic word?
+>>> Complete 127 homework.
+<<< Note taken.
+>>> How many notes have I taken?
+<<< You have 1 notes. Also, what happened to common courtesy?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+12.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, could you please remind me to buy three oranges?
+<<< You have no notes to delete. 
+>>> What was my last note?
+<<< You have no notes.  Also, what happened to common courtesy?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+03.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Please take a note.
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> Buy one orange.
+<<< Note taken.
+>>> Please take a note.
+<<< What would you like me to note? 
+>>> Buy two oranges.
 <<< Note taken.
 >>> What was my last note?
-<<< Your last note was: Remind me to buy oranges tomorrow. 
+<<< Your last note was: Buy two oranges. Also, what's the magic word?
+>>> Please take a note.
+<<< What would you like me to note? 
+>>> Buy three oranges.
+<<< Note taken.
+>>> What was my last note?
+<<< Your last note was: Buy three oranges. Also, what's the magic word?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+02.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Could you take a note?
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> Go to sleep earlier.
+<<< Note taken.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+10.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, please take a note.
+<<< What would you like me to note? Thank you for saying please. So rare these days.
+>>> Buy three oranges.
+<<< Note taken.
+>>> Take a note.
+<<< What would you like me to note? Also, what's the magic word?
+>>> Buy five apples.
+<<< Note taken.
+>>> What note did I take about oranges?
+<<< What would you like me to note? 
+>>> What note did I take about apples?
+<<< Note taken.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Take a note please.
+<<< What would you like me to note? 
+>>> Call mom.
+<<< Note taken.
+>>> What's the total number of notes I have?
+<<< You have 1 notes. Also, what's the magic word?
+>>> Hey, start taking a note.
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> Call dad.
+<<< Note taken.
+>>> How many notes do I have?
+<<< You have 2 notes. 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+05.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, take a note.
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> Buy a pear.
+<<< Note taken.
+>>> Could you delete my previous note?
+<<< Deleted Buy a pear. Also, what's the magic word?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+14.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Please take a note letting me know that I should go to Trader Joe's.
+<<< You have no notes to delete. Also, what's the magic word?
+>>> What was my last note?
+<<< You have no notes. It's empty, just like your mind. Also, what happened to common courtesy?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, take a note.
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> Buy a pear.
+<<< Note taken.
+>>> Could you remove my last note?
+<<< Deleted Buy a pear. 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+13.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, please take a note reminding me to buy an apple.
+<<< You have no notes to delete. 
+>>> What was my note about apples?
+<<< You have no notes. It's empty, just like your mind. Also, what happened to common courtesy?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+11.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, please take a note.
+<<< What would you like me to note? You're very, very welcome.
+>>> Buy three oranges.
+<<< Note taken.
+>>> Take a note.
+<<< What would you like me to note? 
+>>> Buy five apples.
+<<< Note taken.
+>>> What note did I take about oranges?
+<<< What would you like me to note? Also, what happened to common courtesy?
+>>> What note did I take about apples?
+<<< Note taken.
+>>> Delete the note about apples.
+<<< Deleted What note did I take about apples? 
+>>> What was the last note I took?
+<<< What would you like me to note? 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+01.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, please take a note for me.
+<<< What would you like me to note? 
+>>> Remind me to buy apples.
+<<< Note taken.
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
