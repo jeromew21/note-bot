@@ -37,7 +37,7 @@ class Conversation:
             sass = " " + random.choice(("Also, what happened to common courtesy?", "", "Also, what's the magic word?"))
         
         if func == -1:
-            return "I do not know what you are talking about. " + random.choice(("Please speaka English.", "Are you deaf?"))
+            return "I do not know what you are talking about. " + random.choice(("Please speaka English.", "Are you deaf?", "Are you four years old?"))
         elif func == 0:
             self.lastCommand = True
             return "What would you like me to note?" + sass
