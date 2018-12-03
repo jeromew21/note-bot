@@ -1,0 +1,18 @@
+advanced.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Remind me to buy three oranges tomorrow.
+<<< You have no notes to delete. 
+>>> What note did I take about oranges?
+<<< What would you like me to note? 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+basic.txt
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Hey, please take a note for me.
+<<< What would you like me to note? You're very, very welcome.
+>>> Remind me to buy oranges tomorrow.
+<<< Note taken.
+>>> What was my last note?
+<<< Your last note was: Remind me to buy oranges tomorrow. 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
