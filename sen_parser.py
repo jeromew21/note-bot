@@ -9,6 +9,7 @@ def synsets(word):
     for syn in wordnet.synsets(word): 
         yield syn
 
+# Maps POS tags to wordnet equivalent tag
 POS_MAPPING = {
     'NN': 'n',
     'NNS': 'n',
@@ -29,13 +30,8 @@ keywords = [
     [wordnet.synset("take.v.01")],
     [wordnet.synset("retrieve.v.02"), wordnet.synset("last.n.02")],
     [wordnet.synset("delete.v.01"), wordnet.synset("remove.v.01")],
-    [wordnet.synset('total.v.01'), wordnet.synset("many.a.01")],
+    [wordnet.synset("total.v.01"), wordnet.synset("many.a.01")],
 ]
-
-#for vec in keyword_vectors:
- #   for i in range(len(vec)):
-  #      for syn in synonyms(vec[i]):
-   #         vec.append(syn)
 
 def pos_tag_to_wordnet_tag(tag):
     """ Takes POS tag from NLTK and returns equivalent wordnet tag and None if not verb, noun, or adj """
@@ -43,16 +39,19 @@ def pos_tag_to_wordnet_tag(tag):
     return POS_MAPPING.get(tag, None)
 
 def tokenize_bigrams(sentence):
+    """ Tokenizes sentence into bigrams. """"
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
     tokens = nltk.word_tokenize(sentence)
     return tokens
 
 def tokenize(sentence):
+    """ Tokenizes sentence. """"
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
     tokens = nltk.word_tokenize(sentence)
     return [t for t in tokens if t not in STOPWORDS]
 
 def classify(tokens):
+    """ Classifies sentence by it's tokens. Returns a value desired command. """"
     threshold = 0.20
     max_max_word_similarity = -1000
     max_keyword_index = 0
@@ -85,6 +84,7 @@ def classify(tokens):
 
 
 def text2int(textnum, numwords={}):
+    """ Converts a cardinal or ordinal number to it's numerical counterpart. """"
     if not numwords:
         units = [
         "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
@@ -140,6 +140,3 @@ def get_quantity(sentence):
         else:
             return q
     return None
-
-
-#please
