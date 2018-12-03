@@ -34,10 +34,10 @@ class Conversation:
         if "please" in sentence.split(" "):
             sass = " " + random.choice(("Thank you for saying please. So rare these days.", "", "You're very, very welcome."))
         else:
-            sass = " " + random.choice(("What happened to common courtesy?"))
+            sass = " " + random.choice(("Also, what happened to common courtesy?", "", "Also, what's the magic word?"))
         
         if func == -1:
-            return "I do not know what you are talking about."
+            return "I do not know what you are talking about. " + random.choice(("Please speaka English.", "Are you deaf?"))
         elif func == 0:
             self.lastCommand = True
             return "What would you like me to note?" + sass
@@ -61,7 +61,7 @@ class Conversation:
                 return "I do not have that many notes!"
             return "Your {0} note was: ".format(q-1) + self.notes[q-1]
         else:
-            return "You have no notes."
+            return "You have no notes. " + random.choice(("", "It's empty, just like your mind."))
     
     def deleteNote(self, q):
         if self.notes:

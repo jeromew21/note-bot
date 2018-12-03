@@ -39,19 +39,19 @@ def pos_tag_to_wordnet_tag(tag):
     return POS_MAPPING.get(tag, None)
 
 def tokenize_bigrams(sentence):
-    """ Tokenizes sentence into bigrams. """"
+    """ Tokenizes sentence into bigrams. """
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
     tokens = nltk.word_tokenize(sentence)
     return tokens
 
 def tokenize(sentence):
-    """ Tokenizes sentence. """"
+    """ Tokenizes sentence. """
     sentence = "".join([i for i in sentence.lower() if i in "qwertyuiopasdfghjklzxcvbnm "])
     tokens = nltk.word_tokenize(sentence)
     return [t for t in tokens if t not in STOPWORDS]
 
 def classify(tokens):
-    """ Classifies sentence by it's tokens. Returns a value desired command. """"
+    """ Classifies sentence by it's tokens. Returns a value desired command. """
     threshold = 0.20
     max_max_word_similarity = -1000
     max_keyword_index = 0
@@ -84,7 +84,7 @@ def classify(tokens):
 
 
 def text2int(textnum, numwords={}):
-    """ Converts a cardinal or ordinal number to it's numerical counterpart. """"
+    """ Converts a cardinal or ordinal number to it's numerical counterpart. """
     if not numwords:
         units = [
         "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
